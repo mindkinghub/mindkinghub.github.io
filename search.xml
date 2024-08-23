@@ -4,6 +4,8 @@
     <title>Hello World</title>
     <url>/2024/07/26/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -24,6 +26,8 @@
     <content><![CDATA[<p>爬虫可以帮助我们快速把网站上的信息快速提取并保存下来。</p>
 <p>把互联网比作一张大网，而爬虫（即网络爬虫）便是在网上爬行的蜘蛛。把网的节点比作一个个网页，爬虫爬到这就相当于访问了该页面，就能把网页上的信息提取出来。我们可以把节点间的连线比作网页与网页之间的链接关系，这样蜘蛛通过一个节点后，可以顺着节点连线继续爬行到达下一个节点，即通过一个网页继续获取后续的网页，这样整个网的节点便可以被蜘蛛全部爬行到，网站的数据就可以被抓取下来了。</p>
 <p>简单来说，爬虫就是获取网页并提取和保存信息的自动化程序</p>
+<span id="more"></span>
+
 <h2 id="获取网页"><a href="#获取网页" class="headerlink" title="获取网页"></a>获取网页</h2><p>爬虫首先要做的工作就是获取网页，这里就是获取网页的源代码。源代码里包含了网页的部分有用信息，所以只要把源代码获取下来，就可以从中提取想要的信息了。</p>
 <p>最关键的部分就是构造一个请求并发送给服务器，然后接收到响应并将其解析出来。Python 提供了许多库来帮助我们实现这个操作，如 <code>urllib</code>、<code>requests</code> 等。我们可以用这些库来实现 HTTP 请求操作，请求和响应都可以用类库提供的数据结构来表示，得到响应之后只需要解析数据结构中的 <code>body</code> 部分即可，即得到网页的源代码，这样我们可以用程序来实现获取网页的过程了。</p>
 <h2 id="提取信息"><a href="#提取信息" class="headerlink" title="提取信息"></a>提取信息</h2><p>获取网页的源代码后，接下来就是分析网页的源代码，从中提取我们想要的数据。首先，最通用的方法便是采用正则表达式提取，这是一个万能的方法，但是在构造正则表达式时比较复杂且容易出错。</p>
